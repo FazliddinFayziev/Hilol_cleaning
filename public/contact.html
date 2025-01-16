@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<!-- HEAD -->
+
+<head>
+	<!-- META CHARSET -->
+	<meta charset="UTF-8">
+	<!-- META VIEWPORT -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- META EDGE -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- TITLE -->
+	<title>Hilol</title>
+	<!-- META DESCRIPTION -->
+	<meta name="description" content="Hilol cleaning - Purity is half of faith">
+	<!-- META KEYWORDS -->
+	<meta name="keywords" content="
+		Hilol au,
+		Hilol Cleaning,
+		Hilol Cleaning Sydney,
+		Park Cleaning Services, 
+		Cleaning Experts Sydney, 
+		Hilol Cleaning Australia,
+		Office Cleaning Services, 
+		Green Cleaning Solutions, 
+		Reliable Cleaning Company, 
+		Sydney Community Cleaning, 
+		Deep Cleaning Specialists, 
+		Commercial Cleaning Sydney, 
+		Corporate Cleaning Services, 
+		Cleaning for Natural Spaces, 
+		Workplace Hygiene Solutions, 
+		Eco-Friendly Cleaning Sydney, 
+		Affordable Cleaning Services, 
+		Professional Cleaning Sydney, 
+		Public Space Cleaning Sydney, 
+		Sustainable Cleaning Services, 
+		Best Cleaning Services Near Me, 
+		Local Cleaning Business Sydney, 
+		Hygiene and Sanitation Services,
+		Environmentally Responsible Cleaning,
+		Hilol cleaning - Purity is half of faith">
+	<!-- META AUTHOR -->
+	<meta name="author" content="Fazliddin Fayziev">
+	<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+	<link rel="stylesheet" href="CSS/style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="CSS/font-awesome.min.css">
+</head>
+
+<!-- HEAD END -->
+
+<!-- BODY -->
+
+<body>
+
+	<!-- ============================================== SUB HEADER ============================================== -->
+	<section class="sub-header">
+		<nav>
+			<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times hide" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="service.html">SERVICE</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()" class="showMenu"></i>
+		</nav>
+		<h1 style="font-size: 30px; margin-top: 50px;">Contact Us</h1>
+	</section>
+	<!-- ============================================== SUB HEADER END =========================================== -->
+
+	<!-- ============================================== CONTACT US ========================================= -->
+	<section class="contact-us">
+		<div class="row">
+			<div class="contact-col">
+				<div>
+					<i class="fa fa-home"></i>
+					<span>
+						<h5>Sydney</h5>
+						<p style="color: black;">Australia</p>
+					</span>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<span>
+						<h5>info@hilol.com.au</h5>
+						<p style="color: black;">Feel free to reach out to us via email.</p>
+					</span>
+				</div>
+				<div>
+
+					<i class="fa fa-phone"></i>
+					<span>
+						<h5>+61 466-005-478</h5>
+						<p style="color: black;">Feel free to call .</p>
+					</span>
+				</div>
+			</div>
+			<div class="contact-col">
+				<form action="" onsubmit=" return sendtelegram()">
+					<label for="name" class="name">Name</label>
+					<input id="f-name" class="first-name" type="text" name="first-name" placeholder="First Name"
+						maxlength="20" required>
+
+					<input id="l-name" class="last-name" type="text" name="last-name" placeholder="Last Name"
+						maxlength="20" required>
+
+					<label for="subject" class="subject">Subject</label>
+					<input type="text" name="subject" id="subject" maxlength="45" id="subject"
+						placeholder="Request for Cleaning" required>
+
+					<label for="phone" class="phone">Phone number</label>
+					<input id="phone" type="tel" name="tel" placeholder="+1(607)267-**-**" required>
+
+					<label for="message" class="message">Message</label>
+					<textarea id="message" name="message" cols="30" rows="7" required maxlength="500"
+						placeholder="I need information about Hilol Cleaning Services!" required></textarea>
+
+					<p class="button-container">
+						<input class="button hero-btn"
+							style="border: inset 3px rgb(7, 7, 7); cursor: pointer; color: black;" type="submit"
+							value="Send Message" id="btn">
+					</p>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- ============================================== CONTACT US END ========================================= -->
+
+	<!-- ===================================================== FOOTER ====================================================== -->
+	<section class="footer">
+		<p class="about-des" style="color: black;">copyright &copy; Hilol <span id="date"></span>. all rights
+			reserved</p>
+	</section>
+	<!-- ===================================================== FOOTER END ====================================================== -->
+
+	<!-- ======================================================================================================================= -->
+	<!-- ===================================================== JAVASCRIPT ====================================================== -->
+	<!-- ======================================================================================================================= -->
+	<!-- Importan likns for telegram bot -->
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- end of the important links -->
+
+	<!-- JAVACRIPT CODE -->
+	<script>
+		//bot token
+		var telegram_bot_id = "7912152747:AAEWZ0TpYYtqeJqfdBfz0KZTy8KYaZ2fLOY";
+		//chat id
+		var chat_id = -1002309096697;
+		var u_name, email, message;
+		var ready = function () {
+			subject = document.getElementById("subject").value;
+			message = document.getElementById("message").value;
+			f_name = document.getElementById("f-name").value;
+			l_name = document.getElementById("l-name").value;
+			phoneNumber = document.getElementById("phone").value;
+			message = "First name: " + f_name + "\nLast name: " + l_name + "\nSubject: " + subject + "\nPhone number: " + phoneNumber + "\nMessage: " + message;
+		};
+		var sendtelegram = function () {
+			ready();
+			var settings = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+				"method": "POST",
+				"headers": {
+					"Content-Type": "application/json",
+					"cache-control": "no-cache"
+				},
+				"data": JSON.stringify({
+					"chat_id": chat_id,
+					"text": message
+				})
+			};
+			$.ajax(settings).done(function (response) {
+				console.log(response);
+			});
+			document.getElementById("f-name").value = "";
+			document.getElementById("l-name").value = "";
+			document.getElementById("subject").value = "";
+			document.getElementById("phone").value = "";
+			document.getElementById("message").value = "";
+			return false;
+		};
+	</script>
+
+	<!-------------------- Javascript for Toggle Menue---------------------->
+	<script>
+		var navLinks = document.getElementById("navLinks");
+		function showMenu() {
+			navLinks.style.right = "0";
+
+		}
+		function hideMenu() {
+			navLinks.style.right = "-200px";
+
+		}
+	</script>
+	<script>
+		// ********** set date ************
+		const date = document.getElementById("date")
+		date.innerHTML = new Date().getFullYear();
+	</script>
+
+</body>
+<!-- BODY END -->
+
+</html>

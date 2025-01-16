@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<!-- HEAD -->
+
+<head>
+	<!-- META CHARSET -->
+	<meta charset="UTF-8">
+	<!-- META VIEWPORT -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- META EDGE -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- TITLE -->
+	<title>Hilol</title>
+	<!-- META DESCRIPTION -->
+	<meta name="description" content="Hilol cleaning - Purity is half of faith">
+	<!-- META KEYWORDS -->
+	<meta name="keywords" content="
+		Hilol au,
+		Hilol Cleaning,
+		Hilol Cleaning Sydney,
+		Park Cleaning Services, 
+		Cleaning Experts Sydney, 
+		Hilol Cleaning Australia,
+		Office Cleaning Services, 
+		Green Cleaning Solutions, 
+		Reliable Cleaning Company, 
+		Sydney Community Cleaning, 
+		Deep Cleaning Specialists, 
+		Commercial Cleaning Sydney, 
+		Corporate Cleaning Services, 
+		Cleaning for Natural Spaces, 
+		Workplace Hygiene Solutions, 
+		Eco-Friendly Cleaning Sydney, 
+		Affordable Cleaning Services, 
+		Professional Cleaning Sydney, 
+		Public Space Cleaning Sydney, 
+		Sustainable Cleaning Services, 
+		Best Cleaning Services Near Me, 
+		Local Cleaning Business Sydney, 
+		Hygiene and Sanitation Services,
+		Environmentally Responsible Cleaning,
+		Hilol cleaning - Purity is half of faith">
+	<!-- META AUTHOR -->
+	<meta name="author" content="Fazliddin Fayziev">
+	<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+	<link rel="stylesheet" href="CSS/style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="CSS/font-awesome.min.css">
+</head>
+
+<!-- HEAD END -->
+
+<!-- BODY -->
+
+<body>
+
+  <!-- ============================================== SUB HEADER ============================================== -->
+  <section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times hide" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="service.html">SERVICE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()" class="showMenu"></i>
+    </nav>
+    <h1 style="font-size: 30px; margin-top: 50px;">Our Story</h1>
+  </section>
+  <!-- ============================================== SUB HEADER END =========================================== -->
+
+  <!-- ============================================== ABOUT US ========================================= -->
+  <section class="about-us">
+    <div class="about-row">
+      <div class="about-col">
+        <h1>Transform Your Space with Hilol Clean</h1>
+        <p>
+          At <strong>Hilol Clean</strong>, we’re dedicated to delivering exceptional cleaning services that go beyond
+          expectations. Our team of skilled professionals ensures every corner shines, providing tailored solutions to
+          meet your specific needs. From end-of-lease cleaning to gardening services and everything in between, we take
+          pride in creating spotless, welcoming spaces.
+          <br><br>
+          By choosing Hilol Clean, you save time and effort while enjoying a clean, hygienic environment that reflects
+          care and professionalism. Let us handle the hard work so you can focus on what truly matters. Experience the
+          transformation with our reliable and eco-friendly cleaning services designed to make your world brighter.
+        </p>
+      </div>
+      <div class="about-col">
+        <img src="images/about.png" alt="Hilol Clean Services">
+      </div>
+    </div>
+  </section>
+  <!-- ============================================== ABOUT END ========================================= -->
+
+  <!-- ===================================================== FOOTER ====================================================== -->
+  <section class="footer">
+    <p class="about-des" style="color: black;">copyright &copy; Hilol <span id="date"></span>. all rights
+      reserved</p>
+  </section>
+  <!-- ===================================================== FOOTER END ====================================================== -->
+
+  <!-- ======================================================================================================================= -->
+  <!-- ===================================================== JAVASCRIPT ====================================================== -->
+  <!-- ======================================================================================================================= -->
+
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+      navLinks.style.right = "0";
+
+    }
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+
+    }
+  </script>
+  <script>
+    // ********** set date ************
+    const date = document.getElementById("date")
+    date.innerHTML = new Date().getFullYear();
+  </script>
+</body>
+<!-- BODY  END-->
+
+</html>

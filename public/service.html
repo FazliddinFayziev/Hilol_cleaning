@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<!-- HEAD -->
+
+<!-- HEAD -->
+
+<head>
+	<!-- META CHARSET -->
+	<meta charset="UTF-8">
+	<!-- META VIEWPORT -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- META EDGE -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- TITLE -->
+	<title>Hilol</title>
+	<!-- META DESCRIPTION -->
+	<meta name="description" content="Hilol cleaning - Purity is half of faith">
+	<!-- META KEYWORDS -->
+	<meta name="keywords" content="
+		Hilol au,
+		Hilol Cleaning,
+		Hilol Cleaning Sydney,
+		Park Cleaning Services, 
+		Cleaning Experts Sydney, 
+		Hilol Cleaning Australia,
+		Office Cleaning Services, 
+		Green Cleaning Solutions, 
+		Reliable Cleaning Company, 
+		Sydney Community Cleaning, 
+		Deep Cleaning Specialists, 
+		Commercial Cleaning Sydney, 
+		Corporate Cleaning Services, 
+		Cleaning for Natural Spaces, 
+		Workplace Hygiene Solutions, 
+		Eco-Friendly Cleaning Sydney, 
+		Affordable Cleaning Services, 
+		Professional Cleaning Sydney, 
+		Public Space Cleaning Sydney, 
+		Sustainable Cleaning Services, 
+		Best Cleaning Services Near Me, 
+		Local Cleaning Business Sydney, 
+		Hygiene and Sanitation Services,
+		Environmentally Responsible Cleaning,
+		Hilol cleaning - Purity is half of faith">
+	<!-- META AUTHOR -->
+	<meta name="author" content="Fazliddin Fayziev">
+	<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+	<link rel="stylesheet" href="CSS/style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="stylesheet" href="CSS/font-awesome.min.css">
+</head>
+
+<!-- HEAD END -->
+
+<!-- BODY -->
+
+<body>
+
+	<!-- ============================================== SUB HEADER ============================================== -->
+	<section class="sub-header">
+		<nav>
+			<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times hide" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="service.html">SERVICE</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()" class="showMenu"></i>
+		</nav>
+		<h1 style="font-size: 30px; margin-top: 50px;">Our Services</h1>
+	</section>
+	<!-- ============================================== SUB HEADER END =========================================== -->
+
+	<!-- ============================================== SERVICES =========================================== -->
+
+	<section id="services" class="services-section">
+		<div class="container">
+			<h1 class="section-title">Our Services</h1>
+	
+			<div class="services-grid">
+				<!-- Service 1 -->
+				<div class="service-item">
+					<img src="images/1.jpg" alt="End of Lease Cleaning" class="service-image">
+					<h3>End of Lease Cleaning</h3>
+					<p>
+						Moving out? We ensure your property looks spotless with our thorough end-of-lease cleaning services, helping you secure your bond with ease.
+					</p>
+				</div>
+	
+				<!-- Service 2 -->
+				<div class="service-item">
+					<img src="images/2.jpg" alt="Carpet Steam Cleaning" class="service-image">
+					<h3>Carpet Steam Cleaning</h3>
+					<p>
+						Bring life back to your carpets with our deep steam cleaning. We remove stubborn stains, dirt, and allergens for a fresh, clean feel.
+					</p>
+				</div>
+	
+				<!-- Service 3 -->
+				<div class="service-item">
+					<img src="images/3.jpg" alt="Gardening Services" class="service-image">
+					<h3>Gardening Services</h3>
+					<p>
+						From lawn mowing to hedge trimming, we take care of your garden, keeping it lush and beautifully maintained all year round.
+					</p>
+				</div>
+	
+				<!-- Service 4 -->
+				<div class="service-item">
+					<img src="images/4.jpg" alt="Hard Rubbish Removal" class="service-image">
+					<h3>Hard Rubbish Removal</h3>
+					<p>
+						Clear out the clutter effortlessly with our hard rubbish removal services. We handle the heavy lifting so you don’t have to.
+					</p>
+				</div>
+	
+				<!-- Service 5 -->
+				<div class="service-item">
+					<img src="images/5.jpg" alt="Window Cleaning" class="service-image">
+					<h3>Window Cleaning</h3>
+					<p>
+						Let the sunlight in! Our streak-free window cleaning services make your windows sparkle inside and out.
+					</p>
+				</div>
+	
+				<!-- Service 6 -->
+				<div class="service-item">
+					<img src="images/6.jpg" alt="Other Cleaning Services" class="service-image">
+					<h3>Other Cleaning</h3>
+					<p>
+						From general cleaning to specialized requests, we offer a range of customizable services to meet your unique needs.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>	
+
+	<!-- ============================================== SERVICES END =========================================== -->
+
+	<!-- ===================================================== FOOTER ====================================================== -->
+	<section class="footer">
+		<p class="about-des" style="color: black;">copyright &copy; Hilol <span id="date"></span>. all rights
+			reserved</p>
+	</section>
+	<!-- ===================================================== FOOTER END ====================================================== -->
+
+	<!-- ======================================================================================================================= -->
+	<!-- ===================================================== JAVASCRIPT ====================================================== -->
+	<!-- ======================================================================================================================= -->
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!-------------------- Javascript for Toggle Menue---------------------->
+	<script>
+		var navLinks = document.getElementById("navLinks");
+		function showMenu() {
+			navLinks.style.right = "0";
+
+		}
+		function hideMenu() {
+			navLinks.style.right = "-200px";
+		}
+	</script>
+	<script>
+		// ********** set date ************
+		const date = document.getElementById("date")
+		date.innerHTML = new Date().getFullYear();
+	</script>
+	<!-- scroll animation =======================================================================================-->
+	<script>
+		AOS.init();
+	</script>
+</body>
+<!-- BODY END -->
+
+</html>
